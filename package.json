@@ -1,17 +1,17 @@
 {
-  "name": "Meadow City - VR & 🎼🔊",
-  "version": "0.0.1",
-  "description": "A playground for VR & Sound :)",
+  "name": "theblz",
+  "version": "0.0.2",
+  "description": "Infinite the blz!",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.15.2",
-    "browserify-middleware": "^7.1.0",
-    "glslify": "^6.0.2",
-    "glsl-noise": "^0.10.0",
-    "tone": "^0.12.2"
+    "express": "^4.16.2",
+    "browserify-middleware": "^8.0.0",
+    "glslify": "^6.1.0",
+    "glsl-noise": "^0.0.0",
+    "tone": "^0.12.50"
   },
   "engines": {
     "node": "6.10.x"
