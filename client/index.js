@@ -3,35 +3,22 @@
 const glsl = require('glslify');
 const vertexShader = glsl.file('../shaders/vertex.glsl');
 const fragmentShader = glsl.file('../shaders/fragment.glsl');
-//const Tone = require('Tone');
-//var player = require("Tone").Player;
 
-var theplayer = require("Tone").player;
-Tone.Transport.loop = true;
-Tone.Transport.start(0);
-console.log("sanity check");
 
-/**var player = new Tone.Player({
-  url: "https://cdn.glitch.com/e6e85513-e78c-4f1f-a548-e117d0e514d4%2Floop.mp3?1517704399354",
-  loop: true
-}).toMaster().sync().start(0);
-
-Tone.Transport.loop = true;
-Tone.Transport.start(0);
-console.log("sanity check");
-**/
-
+//console.log("sanity check");
+// Component to change to random color on click.
 
 
 AFRAME.registerComponent('funktion', {
   init: function () {
-    
-    // TODO : Replace this with accessing the global Buffer's bass.wav
+    var dist = new Tone.Distortion(0.8).toMaster();
+
     this.player = new Tone.Player({
         url: "https://cdn.glitch.com/e6e85513-e78c-4f1f-a548-e117d0e514d4%2Floop.mp3?1517704399354",
         loop: true
         
-      }).toMaster().sync().start(0);
+      }).connect(dist).sync();
+
     
     this.player.autostart = true;
     
@@ -40,6 +27,11 @@ AFRAME.registerComponent('funktion', {
     
     this.meter = new Tone.Meter("level");
     this.player.connect(this.meter);    
+    
+    
+    Tone.Transport.loop = true;
+    Tone.Transport.start(0);
+    
   },
 
   /**
@@ -56,9 +48,10 @@ AFRAME.registerComponent('funktion', {
    * On each frame, update the 'time' uniform in the shaders.
    */
   tick: function (t) {
-    var val = this.meter.value;
+    
+    var val = this.meter.value * 2;
     var currentPosition = this.el.object3D.position;
-    this.el.object3D.position.set(currentPosition.x, currentPosition.y, val * -32);
+    this.el.object3D.position.set(currentPosition.x, currentPosition.y, val * 2);
   }
-})
-
+  
+});
