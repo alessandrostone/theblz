@@ -1,6 +1,6 @@
 {
   "name": "theblz",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "Infinite the blz!",
   "main": "server.js",
   "scripts": {
@@ -11,13 +11,13 @@
     "browserify-middleware": "^8.0.0",
     "glslify": "^6.1.0",
     "glsl-noise": "^0.0.0",
-    "tone": "^0.12.50"
+    "tone": "^0.10.0"
   },
   "engines": {
     "node": "6.10.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/welcome-project"
+    "url": "https://github.com/alessandrostone/theblz"
   },
   "license": "MIT",
   "keywords": [

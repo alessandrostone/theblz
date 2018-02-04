@@ -2,3 +2,7 @@
 {"name":"click-me.svg","date":"2016-10-23T16:17:49.954Z","url":"https://cdn.hyperdev.com/click-me.svg","type":"image/svg","size":7116,"imageWidth":276,"imageHeight":276,"thumbnail":"https://cdn.hyperdev.com/click-me.svg","thumbnailWidth":276,"thumbnailHeight":276,"dominantColor":"rgb(243, 185, 186)","uuid":"adSBq97hhhpFNUnb"}
 {"name":"paste-me.svg","date":"2016-10-24T16:17:49.954Z","url":"https://cdn.hyperdev.com/paste-me.svg","type":"image/svg","size":7242,"imageWidth":276,"imageHeight":276,"thumbnail":"https://cdn.hyperdev.com/paste-me.svg","thumbnailWidth":276,"thumbnailHeight":276,"dominantColor":"rgb(42, 179, 185)","uuid":"adSBq97hhhpFNUnc"}
 {"name":"loop.mp3","date":"2018-02-04T00:33:19.354Z","url":"https://cdn.glitch.com/e6e85513-e78c-4f1f-a548-e117d0e514d4%2Floop.mp3","type":"audio/mp3","size":57095,"thumbnail":"https://cdn.glitch.com/e6e85513-e78c-4f1f-a548-e117d0e514d4%2Fthumbnails%2Floop.mp3","thumbnailWidth":210,"thumbnailHeight":210,"dominantColor":"rgba(42, 153, 201, 0.60)","uuid":"nSHrcoXWPuzvKwxK"}
+{"uuid":"adSBq97hhhpFNUnc","deleted":true}
+{"uuid":"adSBq97hhhpFNUnb","deleted":true}
+{"uuid":"adSBq97hhhpFNUna","deleted":true}
+{"name":"model.dae","date":"2018-02-04T01:46:23.382Z","url":"https://cdn.glitch.com/e6e85513-e78c-4f1f-a548-e117d0e514d4%2Fmodel.dae","type":"","size":1248406,"thumbnail":"https://cdn.glitch.com/e6e85513-e78c-4f1f-a548-e117d0e514d4%2Fthumbnails%2Fmodel.dae","thumbnailWidth":210,"thumbnailHeight":210,"dominantColor":"rgba(21, 69, 124, 0.60)","uuid":"xOOJN9ac9adFrjqr"}
