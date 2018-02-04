@@ -11,7 +11,8 @@
     "browserify-middleware": "^8.0.0",
     "glslify": "^6.1.0",
     "glsl-noise": "^0.0.0",
-    "tone": "^0.10.0"
+    "tone": "^0.12.50",
+    "quicksettings": "^3.0.1"
   },
   "engines": {
     "node": "6.10.x"

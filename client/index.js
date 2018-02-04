@@ -3,35 +3,27 @@
 const glsl = require('glslify');
 const vertexShader = glsl.file('../shaders/vertex.glsl');
 const fragmentShader = glsl.file('../shaders/fragment.glsl');
-
-
-//console.log("sanity check");
-// Component to change to random color on click.
-
-
-AFRAME.registerComponent('funktion', {
-  init: function () {
-    var dist = new Tone.Distortion(0.8).toMaster();
-
-    this.player = new Tone.Player({
+const quicksettings = require('quicksettings');
+//require(["quicksettings"]);
+$(document).ready(function(){
+  var dist   = new Tone.Distortion(1.0).toMaster();
+  var player = new Tone.Player({
         url: "https://cdn.glitch.com/e6e85513-e78c-4f1f-a548-e117d0e514d4%2Floop.mp3?1517704399354",
         loop: true
         
       }).connect(dist).sync();
-
-    
-    this.player.autostart = true;
-    
-    //this.player = player;
-    this.player.playbackRate /= 1;
-    
-    this.meter = new Tone.Meter("level");
-    this.player.connect(this.meter);    
-    
-    
-    Tone.Transport.loop = true;
-    Tone.Transport.start(0);
-    
+  player.autostart = true;
+     
+  
+  
+  AFRAME.registerComponent('funktion', {
+  init: function () {
+  
+  this.meter = new Tone.Meter("level");
+  player.connect(this.meter);
+  player.playbackRate /= 1;
+  Tone.Transport.loop = true;
+  Tone.Transport.start(0);
   },
 
   /**
@@ -55,3 +47,23 @@ AFRAME.registerComponent('funktion', {
   }
   
 });
+  
+  
+    function openSettings() {
+  var panel1 = quicksettings.create(10, 10, "Panel 1")
+		.addRange("Pitch", 0, 100, 0, 1, function(value) { setPitch(value)});
+};
+  var distWet = 0;
+  function setPitch(value) {
+  console.log(value);
+    dist.wet.value = value / 100;
+};
+    $("#btn-sett").click(openSettings());
+});
+
+
+//console.log("sanity check");
+// Component to change to random color on click.
+
+
+

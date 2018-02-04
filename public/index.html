@@ -7,17 +7,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/0.10.0/Tone.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quicksettings@latest/quicksettings.min.js"></script>
     <script src="./js/index.js"></script>
   </head>
+  
   <body>
-    <a-scene play-sound canvas="canvas: #my-canvas">
+    <button id="btn-sett">Settings</button>
+    
+    <a-scene play-sound>
+      
       <a-sky color="#482468"></a-sky>
       <a-assets timeout="1000">
         <a-asset-item id="f1" src="https://cdn.glitch.com/e6e85513-e78c-4f1f-a548-e117d0e514d4%2Fmodel.dae?1517708783382"></a-asset-item>
       </a-assets>
       <a-entity funktion collada-model="#f1" position="-1 0 -3000" scale="2 2 2"></a-entity>
+      
       <a-camera position="0 0.5 5" >
       </a-camera>
     </a-scene>
