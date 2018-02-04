@@ -1,0 +1,28 @@
+{
+  "name": "Meadow City - VR & 🎼🔊",
+  "version": "0.0.1",
+  "description": "A playground for VR & Sound :)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "browserify-middleware": "^7.1.0",
+    "glslify": "^6.0.2",
+    "glsl-noise": "^0.10.0",
+    "tone": "^0.12.2"
+  },
+  "engines": {
+    "node": "6.10.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/welcome-project"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
