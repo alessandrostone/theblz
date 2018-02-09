@@ -12,7 +12,8 @@
     "glslify": "^6.1.0",
     "glsl-noise": "^0.0.0",
     "tone": "^0.12.50",
-    "quicksettings": "^3.0.1"
+    "quicksettings": "^3.0.1",
+    "nexusui": "^2.0.2"
   },
   "engines": {
     "node": "6.10.x"

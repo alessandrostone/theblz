@@ -11,22 +11,35 @@
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/0.10.0/Tone.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/quicksettings@latest/quicksettings.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
+    <script src="./js/index.js">
+    </script>
+    <!--
+    <script src="./js/pitch.js"></script> -->
   </head>
   
   <body>
+    <!-- <button id="btn-sett">Settings</button> -->
     <button id="btn-sett">Settings</button>
-    
+    <script>  </script>
+    <input type="text" min="0" max="100" value="0" class="dial" cursor="true" data-angleoffset="-125"
+    data-anglearc="180" data-fgcolor="#23EE33">
+    <input type="text" min="0" max="100" value="0" class="dial" cursor="true" data-angleoffset="-125"
+    data-anglearc="180" data-fgcolor="#23EE33">
+  
     <a-scene play-sound>
-      
       <a-sky color="#482468"></a-sky>
-      <a-assets timeout="1000">
+      <a-assets timeout="100">
         <a-asset-item id="f1" src="https://cdn.glitch.com/e6e85513-e78c-4f1f-a548-e117d0e514d4%2Fmodel.dae?1517708783382"></a-asset-item>
       </a-assets>
+      
       <a-entity funktion collada-model="#f1" position="-1 0 -3000" scale="2 2 2"></a-entity>
       
       <a-camera position="0 0.5 5" >
       </a-camera>
     </a-scene>
+    
+
+
   </body>
 </html>

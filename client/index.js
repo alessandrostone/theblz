@@ -4,9 +4,11 @@ const glsl = require('glslify');
 const vertexShader = glsl.file('../shaders/vertex.glsl');
 const fragmentShader = glsl.file('../shaders/fragment.glsl');
 const quicksettings = require('quicksettings');
-//require(["quicksettings"]);
+
+var dist  = new Tone.Distortion(0.5).toMaster();
+
 $(document).ready(function(){
-  var dist   = new Tone.Distortion(1.0).toMaster();
+  
   var player = new Tone.Player({
         url: "https://cdn.glitch.com/e6e85513-e78c-4f1f-a548-e117d0e514d4%2Floop.mp3?1517704399354",
         loop: true
@@ -49,18 +51,34 @@ $(document).ready(function(){
 });
   
   
-    function openSettings() {
-  var panel1 = quicksettings.create(10, 10, "Panel 1")
-		.addRange("Pitch", 0, 100, 0, 1, function(value) { setPitch(value)});
-};
+  
+  
   var distWet = 0;
-  function setPitch(value) {
+  
+  //$("#btn-sett").click(openSettings());
+  $(".dial").knob({
+     
+        'change' : function (v) { 
+          setPitch(v);
+          //console.log(v); 
+        }
+    });
+});
+
+
+
+function openSettings() {
+    var panel1 = quicksettings.create(10, 10, "Panel 1")
+		.addRange("Pitch", 0, 100, 0, 1, function(value) { 
+      //setPitch(value)
+    
+    });
+};
+
+function setPitch(value) {
   console.log(value);
     dist.wet.value = value / 100;
 };
-    $("#btn-sett").click(openSettings());
-});
-
 
 //console.log("sanity check");
 // Component to change to random color on click.
